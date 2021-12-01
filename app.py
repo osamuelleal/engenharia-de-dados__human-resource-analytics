@@ -7,6 +7,7 @@ import joblib
 import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
+'''
 #Baixando os aquivos do Data Lake
 client = Minio(
         "localhost:9000",
@@ -20,16 +21,19 @@ client.fget_object("curated","model.pkl","model.pkl")
 client.fget_object("curated","dataset.csv","dataset.csv")
 client.fget_object("curated","cluster.joblib","cluster.joblib")
 
+
+
 var_model = "model"
 var_model_cluster = "cluster.joblib"
 var_dataset = "dataset.csv"
+'''
 
 #carregando o modelo treinado.
-model = load_model(var_model)
-model_cluster = joblib.load(var_model_cluster)
+model = load_model('model.pkl')
+model_cluster = joblib.load('cluster.joblib')
 
 #carregando o conjunto de dados.
-dataset = pd.read_csv(var_dataset)
+dataset = pd.read_csv('dataset.csv')
 
 print (dataset.head())
 
