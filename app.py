@@ -29,7 +29,7 @@ var_dataset = "dataset.csv"
 '''
 
 #carregando o modelo treinado.
-model = load_model('model.pkl')
+model = load_model('model')
 model_cluster = joblib.load('cluster.joblib')
 
 #carregando o conjunto de dados.
