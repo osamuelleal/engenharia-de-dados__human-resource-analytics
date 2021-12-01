@@ -3,6 +3,5 @@ pandas
 streamlit
 pycaret==2.2.0
 minio==7.1.2
-pickle
 joblib
 matplotlib
